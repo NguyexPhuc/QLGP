@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dashboard</title>
+    <link rel="stylesheet" href="css/dash.css">
+    <script src="js/dash.js"></script>
+    <script src="js/phanquyen.js"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+
+</head>
+<body>
+    <div class="dashboard">
+        <div class="sidebar">
+            <ul>
+                <li class="active"><a href="dash.html">Tổng quan</a></li>
+                <li><a href="trangchu.html">Trang chủ</a></li>
+                <li><a href="people.html">Quản lý thành viên</a></li>
+                <li><a href="tree-family.html">Cây phả hệ</a></li>
+                <li><a href="duc.html">Công đức</a></li>
+                <li><a href="login.html">Đăng xuất</a></li>
+            </ul>
+        </div>
+        <div class="main-content">
+            <div class="header">
+                <h1>Tổng Quan</h1>
+                <div id="roleDisplay">Quản trị viên 👤</div>
+            </div>
+            <div class="cards">
+                <div class="card" onclick="showContent('tree')">
+                    <i class="fa-solid fa-seedling"></i>
+                    <h3>Cây phả hệ</h3>
+                    <p>Cây gia phả<br>2 cây đang hoạt động</p>
+                </div>
+                <div class="card" onclick="showContent('members')">
+                    <i class="fa-solid fa-user"></i>
+                    <h3>Thành viên</h3>
+                    <p>Thành viên<br>122 người đã đăng ký</p>
+                </div>
+                <div class="card" onclick="showContent('requests')">
+                    <i class="fa-solid fa-bell"></i>
+                    <h3>Yêu cầu</h3>
+                    <p>Yêu cầu phê duyệt<br>2 yêu cầu</p>
+                </div>
+                <div class="card" onclick="showContent('backup')">
+                <i class="fa-solid fa-floppy-disk"></i>
+                    <h3>Sao lưu</h3>
+                    <p>Lần sao lưu gần nhất<br>19/5/2025 - 14:31</p>
+                </div>
+            </div>
+            <div class="content-section" id="tree-content">
+                <h2>Cây phả hệ</h2>
+                <p>Thông tin về cây phả hệ sẽ được hiển thị ở đây.</p>
+            </div>
+            <div class="content-section" id="members-content">
+                <h2>Thành viên</h2>
+                <p>Thông tin về thành viên sẽ được hiển thị ở đây.</p>
+            </div>
+            <div class="content-section" id="requests-content">
+                <h2>Yêu cầu</h2>
+                <p>Thông tin về yêu cầu phê duyệt sẽ được hiển thị ở đây.</p>
+            </div>
+            <div class="content-section" id="backup-content">
+                <h2>Sao lưu</h2>
+                <p>Thông tin về sao lưu sẽ được hiển thị ở đây.</p>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
