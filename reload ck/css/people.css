@@ -1,148 +1,143 @@
 
-        body {
-            margin: 0;
-            font-family: Arial, sans-serif;
-            background-color: #f4f6f8;
-        }
+    body {
+      margin: 0;
+      font-family: Arial, sans-serif;
+      background-color: #f7f9fa;
+    }
 
-        .dashboard {
-            display: flex;
-        }
+    .sidebar {
+      width: 250px;
+      background-color: #8B0000;
+      color: white;
+      height: 100vh;
+      position: fixed;
+      top: 0;
+      left: 0;
+      padding: 20px;
+    }
 
-        .main-content {
-            margin-left: 290px;
-            padding: 20px;
-            width: 100%;
-        }
+    .sidebar ul {
+      list-style: none;
+      padding: 0;
+    }
 
-        .header {
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-            background: #ecf0f1;
-            padding: 15px 20px;
-            border-radius: 8px;
-        }
+    .sidebar ul li {
+      margin: 20px 0;
+    }
 
-        .search-add {
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-            margin: 20px 0;
-        }
+    .sidebar ul li a {
+      color: white;
+      text-decoration: none;
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      padding: 10px;
+      border-radius: 6px;
+    }
 
-        .search-add input {
-            padding: 12px;
-            width: 300px;
-            border: 1px solid #ccc;
-            border-radius: 6px;
-            font-size: 16px;
-        }
+    .sidebar ul li.active a {
+      background-color: #4a90e2;
+    }
 
-        .search-add button {
-            background: #27ae60;
-            color: white;
-            border: none;
-            padding: 12px 18px;
-            border-radius: 6px;
-            font-size: 16px;
-            cursor: pointer;
-            transition: background 0.3s ease;
-        }
+    .main-content {
+      margin-left: 270px;
+      padding: 20px;
+    }
 
-        .search-add button:hover {
-            background: #2ecc71;
-        }
+    .header {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      background: #ecf0f1;
+      padding: 15px 20px;
+      border-radius: 8px;
+    }
 
-        #memberTable {
-            width: 100%;
-            border-collapse: collapse;
-            margin-top: 20px;
-            background: white;
-            border-radius: 12px;
-            overflow: hidden;
-            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
-        }
+    .search-add {
+      margin: 20px 0;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
 
-        #memberTable th {
-            background-color: #2980b9;
-            color: white;
-            padding: 12px;
-            font-size: 16px;
-            text-align: left;
-        }
+    .search-add input {
+      padding: 10px;
+      width: 300px;
+      border: 1px solid #ccc;
+      border-radius: 6px;
+    }
 
-        #memberTable td {
-            padding: 10px;
-            font-size: 14px;
-            border-bottom: 1px solid #ddd;
-            vertical-align: middle;
-        }
+    .search-add button {
+      background-color: #27ae60;
+      color: white;
+      border: none;
+      padding: 10px 18px;
+      border-radius: 6px;
+      cursor: pointer;
+    }
 
-        #memberTable td .actions {
-            display: flex;
-            gap: 8px;
-        }
+    table {
+      width: 100%;
+      border-collapse: collapse;
+      background: white;
+      border-radius: 8px;
+      overflow: hidden;
+      box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+    }
 
-        #memberTable td .actions i {
-            cursor: pointer;
-            font-size: 18px;
-        }
+    th, td {
+      padding: 12px;
+      border-bottom: 1px solid #ddd;
+      text-align: left;
+    }
 
-        .edit-form {
-            background: #f8f9fa;
-            padding: 20px;
-            border-radius: 5px;
-            margin-top: 20px;
-        }
+    th {
+      background-color: #007acc;
+      color: white;
+    }
 
-        .edit-form input, .edit-form select {
-            width: 100%;
-            padding: 8px;
-            margin-top: 5px;
-            border: 1px solid #ccc;
-            border-radius: 5px;
-        }
+    .edit-form {
+      background: white;
+      padding: 20px;
+      border-radius: 10px;
+      margin-top: 20px;
+      box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
+    }
 
-        .sidebar {
-            width: 250px;
-            background-color: #8B0000;
-            padding: 20px;
-            border-radius: 12px;
-            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
-            height: calc(100vh - 40px);
-            position: fixed;
-            margin: 10px;
-        }
+    .edit-form input, .edit-form select {
+      width: 100%;
+      padding: 10px;
+      margin: 10px 0;
+      border: 1px solid #ccc;
+      border-radius: 6px;
+    }
 
-        .sidebar ul {
-            list-style: none;
-            padding: 0;
-            margin: 0;
-        }
+    .edit-form button {
+      background-color: #27ae60;
+      color: white;
+      border: none;
+      padding: 10px 16px;
+      border-radius: 6px;
+      cursor: pointer;
+    }
 
-        .sidebar ul li {
-            margin: 20px 0;
-        }
+    .status {
+      width: 12px;
+      height: 12px;
+      border-radius: 50%;
+      display: inline-block;
+    }
 
-        .sidebar ul li a {
-            color: white;
-            text-decoration: none;
-            font-size: 16px;
-            font-weight: 500;
-            display: flex;
-            align-items: center;
-            gap: 10px;
-            padding: 12px 20px;
-            border-radius: 8px;
-            transition: background-color 0.3s ease;
-        }
+    .status.active {
+      background-color: #2ecc71;
+    }
 
-        .sidebar ul li.active a {
-            background-color: #4a90e2;
-            box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
-        }
+    .status.inactive {
+      background-color: #e74c3c;
+    }
 
-        .sidebar ul li a:hover {
-            background-color: #a10000;
-        }
+    .actions i {
+      cursor: pointer;
+      margin: 0 6px;
+      font-size: 16px;
+    }

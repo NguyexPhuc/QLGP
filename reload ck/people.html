@@ -1,69 +1,63 @@
 <!DOCTYPE html>
 <html lang="vi">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Thành viên - desktop</title>
-    <link rel="stylesheet" href="css/people.css">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Quản lý thành viên</title>
+  <link rel="stylesheet" href="css/people.css" />
+  <script src="js/people.js"></script>
+  <script src="js/phanquyen.js"></script>
 </head>
 <body>
-<div class="dashboard">
-    <div class="sidebar">
-        <ul>
-            <li><a href="dash.html">📊 Tổng quan</a></li>
-            <li><a href="trangchu.html">🏠 Trang chủ</a></li>
-            <li class="active"><a href="people.html">👥 Thành viên</a></li>
-            <li><a href="tree-family.html">🌳 Cây phả hệ</a></li>
-            <li><a href="duc.html">🙏 Cống đức</a></li>
-            <li><a href="index.html">🚪 Đăng xuất</a></li>
-        </ul>
+  <div class="sidebar">
+    <ul>
+      <li><a href="dash.html"><span>🏠</span> Tổng quan</a></li>
+      <li><a href="#"><span>🏡</span> Trang chủ</a></li>
+      <li class="active"><a href="people.html"><span>👥</span> Thành viên</a></li>
+      <li><a href="#"><span>🌳</span> Cây phả hệ</a></li>
+      <li><a href="#"><span>🙏</span> Cống đức</a></li>
+      <li><a href="login.html"><span>📕</span> Đăng xuất</a></li>
+    </ul>
+  </div>
+
+  <div class="main-content">
+    <div class="header">
+      <h2>Quản lý thành viên</h2>
+      <div>Chào mừng quản trị viên 👤</div>
     </div>
 
-    <div class="main-content">
-        <div class="header">
-            <h2>Quản lý thành viên</h2>
-            <div>Chào mừng quản trị viên <span>👤</span></div>
-        </div>
-
-        <div class="search-add">
-            <input type="text" id="searchInput" placeholder="Nhập ID / username người dùng">
-            <button onclick="showAddForm()">+ Thêm thành viên</button>
-        </div>
-
-        <!-- Form thêm thành viên (Chỉ Admin có quyền) -->
-        <div id="addMemberForm" class="edit-form" style="display: none;">
-            <h2>Thêm thành viên mới</h2>
-            <label>Họ và tên</label>
-            <input type="text" id="newName" placeholder="Họ và tên">
-            <label>Email</label>
-            <input type="text" id="newEmail" placeholder="Email">
-            <label>Vai trò</label>
-            <select id="newRole">
-                <option value="Admin">Admin</option>
-                <option value="Editor">Editor</option>
-                <option value="Member">Member</option>
-            </select>
-            <button onclick="addMember()">Lưu thành viên</button>
-        </div>
-
-        <table id="memberTable">
-            <thead>
-            <tr>
-                <th>Tên</th>
-                <th>Email</th>
-                <th>Vai trò</th>
-                <th>Trạng thái</th>
-                <th>Hành động</th>
-            </tr>
-            </thead>
-            <tbody id="tableBody">
-            <!-- Danh sách sẽ được tạo từ Local Storage -->
-            </tbody>
-        </table>
+    <div class="search-add">
+      <input type="text" id="searchInput" placeholder="Nhập ID / username người dùng" />
+      <button onclick="showAddForm()">+ Thêm thành viên</button>
     </div>
-</div>
 
+    <div id="addMemberForm" class="edit-form" style="display:none">
+      <h2>Thêm thành viên mới</h2>
+      <label>Họ và tên</label>
+      <input type="text" id="newName" placeholder="Họ và tên">
+      <label>Email</label>
+      <input type="text" id="newEmail" placeholder="Email">
+      <label>Vai trò</label>
+      <select id="newRole">
+        <option value="Admin">Admin</option>
+        <option value="Editor">Editor</option>
+        <option value="Member" selected>Member</option>
+      </select>
+      <button onclick="addMember()">Lưu thành viên</button>
+    </div>
 
-    <script src="js/phanquyen.js"></script>
+    <table>
+      <thead>
+        <tr>
+          <th>Tên</th>
+          <th>Email</th>
+          <th>Vai trò</th>
+          <th>Trạng thái</th>
+          <th>Hành động</th>
+        </tr>
+      </thead>
+      <tbody id="tableBody"></tbody>
+    </table>
+  </div>
 </body>
 </html>
