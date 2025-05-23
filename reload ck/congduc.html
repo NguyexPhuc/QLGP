@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Quản lý công đức</title>
+  <link rel="stylesheet" href="css/congduc.css" />
+  
+</head>
+<body>
+  <div class="dashboard">
+    <div class="sidebar">
+      <ul>
+        <li><a href="dash.html">Tổng quan</a></li>
+        <li><a href="trangchu.html">Trang chủ</a></li>
+        <li><a href="people.html">Thành viên</a></li>
+        <li><a href="#">Cây phả hệ</a></li>
+        <li class="active"><a href="congduc.html">Công đức</a></li>
+        <li><a href="login.html">Đăng xuất</a></li>
+      </ul>
+    </div>
+    <div class="main-content">
+      <div class="header">
+        <h2>Quản lý công đức</h2>
+        <span>Chào mừng quản trị viên 👤</span>
+      </div>
+      <div class="search-add">
+        <input type="text" placeholder="Nhập ID / username người dùng" />
+        <button class="add-btn" onclick="openForm()">+ Thêm công đức</button>
+      </div>
+      <div class="qr-info">
+        <img src="image/Screenshot 2025-05-23 210902.png" alt="QR Code" />
+        <div class="qr-text">
+          <strong>Đây là mã QR nhận công đức</strong><br />
+          Tên Chủ TK: <b>CONG DUC HO NGUYEN</b><br />
+          STK: 123456789999<br />
+          Ngân hàng: VietComLuat<br />
+          Nội dung: CCD-001 Dong Gop Cong Duc - [ TEN ]
+        </div>
+      </div>
+      <table>
+        <thead>
+          <tr>
+            <th>Tên</th>
+            <th>Ngày góp</th>
+            <th>Số tiền / hiện vật</th>
+            <th>Chương trình</th>
+            <th>Hành động</th>
+          </tr>
+        </thead>
+        <tbody id="donationTableBody"></tbody>
+      </table>
+
+      <div class="overlay" id="overlay"></div>
+      <div class="popup-form" id="donationForm">
+        <h3 id="formTitle">Thêm công đức</h3>
+        <form id="form">
+          <input type="hidden" id="rowIndex" />
+          <input type="text" id="name" placeholder="Tên" required />
+          <input type="date" id="date" required />
+          <input type="text" id="amount" placeholder="Số tiền / hiện vật" required />
+          <input type="text" id="program" placeholder="Chương trình" required />
+          <button type="submit">Lưu</button>
+          <button type="button" onclick="closeForm()">Huỷ</button>
+        </form>
+      </div>
+    </div>
+  </div>
+  <script src="js/congduc.js"></script>
+</body>
+</html>
